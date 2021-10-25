@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
 import javax.swing.border.Border;
-public class StoryPage3 extends JFrame implements ActionListener{
+public class StoryPage1 extends JFrame implements ActionListener{
 	     
 	    JFrame window;
 	    JPanel textPanel;
@@ -52,7 +52,7 @@ public class StoryPage3 extends JFrame implements ActionListener{
 	    }
 	    
 		
-	    public StoryPage3(){
+	    public StoryPage1(){
 	         
 	        window = new JFrame();
 	        window.setSize(900,500);
@@ -107,7 +107,8 @@ public class StoryPage3 extends JFrame implements ActionListener{
 	    
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
-			StoryPage4 sp4 = new StoryPage4();
+			StoryPage2 sp2 = new StoryPage2();
+			sp2.getFrame();
 			window.dispose();
 		}
 	}

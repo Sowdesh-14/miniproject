@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
@@ -18,6 +20,7 @@ public class StoryPage7 extends JFrame implements ActionListener{
     JPanel textPanel;
     JTextArea textArea;
     JButton jbtn_next;
+    JLabel lbl_img;
     Font normalFont = new Font("Courier New", Font.PLAIN, 23);
      
     String text;
@@ -60,6 +63,21 @@ public class StoryPage7 extends JFrame implements ActionListener{
         //window.pack();
         window.setResizable(false);
 		
+        jbtn_next = new JButton("Next");
+		jbtn_next.setBounds(670, 420, 120, 25);
+		jbtn_next.setBackground(Color.MAGENTA);
+		jbtn_next.setForeground(Color.black);
+        Border bevelBorder=BorderFactory.createBevelBorder(DEFAULT_CURSOR);
+		jbtn_next.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+		jbtn_next.setBorder(bevelBorder);
+		window.add(jbtn_next);
+		jbtn_next.addActionListener(this);
+		
+		ImageIcon img = new ImageIcon("C:\\Users\\Mohana Sowdesh\\Desktop\\Mini project\\Bar.jfif");
+    	lbl_img = new JLabel("", img, JLabel.LEFT);
+    	lbl_img.setBounds(0, 0, 1000, 500);
+    	window.add(lbl_img);
+    	
         textPanel = new JPanel();
         textPanel.setBounds(100, 300, 600, 250);
         textPanel.setBackground(Color.black);
@@ -76,15 +94,7 @@ public class StoryPage7 extends JFrame implements ActionListener{
          
         window.setVisible(true);
          
-        jbtn_next = new JButton("Next");
-		jbtn_next.setBounds(670, 420, 120, 25);
-		jbtn_next.setBackground(Color.MAGENTA);
-		jbtn_next.setForeground(Color.black);
-        Border bevelBorder=BorderFactory.createBevelBorder(DEFAULT_CURSOR);
-		jbtn_next.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-		jbtn_next.setBorder(bevelBorder);
-		window.add(jbtn_next);
-		jbtn_next.addActionListener(this);
+        
 		
 		text = "Detective heading to a bar...";
          

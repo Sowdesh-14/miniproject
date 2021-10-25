@@ -15,12 +15,12 @@ import javax.swing.JTextArea;
 import javax.swing.Timer;
 import javax.swing.border.Border;
 
-public class StoryPage5 extends JFrame implements ActionListener{
+public class StoryPage16 extends JFrame implements ActionListener{
 	JFrame window;
     JPanel textPanel;
     JTextArea textArea;
-    JLabel lbl_img;
     JButton jbtn_next;
+    JLabel lbl_img;
     Font normalFont = new Font("Courier New", Font.PLAIN, 23);
      
     String text;
@@ -48,11 +48,11 @@ public class StoryPage5 extends JFrame implements ActionListener{
      
  
     public static void main(String[] args) {
-        new StoryPage5();
+        new StoryPage16();
     }
     
 	
-    public StoryPage5(){
+    public StoryPage16(){
          
         window = new JFrame();
         window.setSize(900,500);
@@ -62,10 +62,10 @@ public class StoryPage5 extends JFrame implements ActionListener{
         window.setLocation(200, 150);
         //window.pack();
         window.setResizable(false);
-		
+        
         jbtn_next = new JButton("Next");
 		jbtn_next.setBounds(670, 420, 120, 25);
-		jbtn_next.setBackground(Color.MAGENTA);
+		jbtn_next.setBackground(Color.CYAN);
 		jbtn_next.setForeground(Color.black);
         Border bevelBorder=BorderFactory.createBevelBorder(DEFAULT_CURSOR);
 		jbtn_next.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -73,11 +73,11 @@ public class StoryPage5 extends JFrame implements ActionListener{
 		window.add(jbtn_next);
 		jbtn_next.addActionListener(this);
 		
-		ImageIcon img = new ImageIcon("C:\\Users\\Mohana Sowdesh\\Desktop\\Mini project\\Bank Manager.png");
+		ImageIcon img = new ImageIcon("C:\\Users\\Mohana Sowdesh\\Desktop\\Mini project\\fight.jpg");
     	lbl_img = new JLabel("", img, JLabel.LEFT);
     	lbl_img.setBounds(0, 0, 1000, 500);
     	window.add(lbl_img);
-    	
+		
         textPanel = new JPanel();
         textPanel.setBounds(100, 100, 600, 250);
         textPanel.setBackground(Color.black);
@@ -93,18 +93,24 @@ public class StoryPage5 extends JFrame implements ActionListener{
         textPanel.add(textArea);
          
         window.setVisible(true);
-    	
-		text = "BANK MANAGER: Good Day Mr.Detective!!"
-        		+ "I am happy that you're not busy and appointed for this case.\r\n"
-        		+ "YOU: Yeah. Just came back to the town. Got any clues?\r\n"
-        		+ "BANK MANAGER: No Mr.Detective! But you gotta solve this soon. The reputation of the bank is ruined by these criminals";
+         
+        
+		
+		text = "(Over hear a guy talking about the money )\r\n" + 
+				"Fight scene\r\n" + 
+				"YOU: What's the plan? Where you're shifting the money?\r\n" + 
+				"\r\n" + 
+				"THIEF: Harbour\r\n" + 
+				"\r\n" + 
+				"YOU: (Knocked him down)";
+        		
          
         timer.start();
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-    	StoryPage6 sp6 = new StoryPage6();
-    	window.dispose();
+    	StoryPage17 sp17 = new StoryPage17();
+		window.dispose();
 	}
 }

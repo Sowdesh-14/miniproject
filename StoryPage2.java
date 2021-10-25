@@ -44,7 +44,7 @@ public class StoryPage2 extends JFrame implements ActionListener{
 	
 	@Override
     public void actionPerformed(ActionEvent e) {
-		StoryPage3 sp3 = new StoryPage3();
+		StoryPage4 sp4 = new StoryPage4();
 		dispose();
 	}
 	

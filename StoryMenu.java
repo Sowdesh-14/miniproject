@@ -54,8 +54,7 @@ public class StoryMenu extends JFrame implements ActionListener{
 	
 	@Override
     public void actionPerformed(ActionEvent e) {
-		StoryPage2 sp2 = new StoryPage2();
-		sp2.getFrame();
+		StoryPage1 sp1 = new StoryPage1();
 		dispose();
 	}
 	
