@@ -2,18 +2,17 @@ package game_app;
 
 import java.awt.EventQueue;
 import java.awt.Image;
+import java.awt.Toolkit;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 
-public class TheLock {
+public class Hacking {
 
 	JFrame frame;
-
+	private int lock = 0;
 	/**
 	 * Launch the application.
 	 */
@@ -21,7 +20,7 @@ public class TheLock {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TheLock window = new TheLock();
+					Hacking window = new Hacking();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +32,7 @@ public class TheLock {
 	/**
 	 * Create the application.
 	 */
-	public TheLock() {
+	public Hacking() {
 		initialize();
 	}
 
@@ -42,27 +41,14 @@ public class TheLock {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(470, 150, 450, 300);
+		frame.setBounds(850, 130, 322, 281);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 		frame.setUndecorated(true);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBounds(207, 11, 233, 216);
-		frame.getContentPane().add(lblNewLabel_1);
-		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(270, 252, 89, 23);
-		frame.getContentPane().add(btnNewButton);
-		
-		ImageIcon imge = new ImageIcon("C:\\java-game\\wall.jpg");
-		Image img=imge.getImage();
-		Image imgscale= img.getScaledInstance(900,500, Image.SCALE_SMOOTH);
-        ImageIcon Sicon= new ImageIcon(imgscale);
+		frame.getContentPane().setLayout(null);
+		Image image = Toolkit.getDefaultToolkit().createImage("C:\\java-game\\hackin.gif");
+		ImageIcon Sicon= new ImageIcon(image);
 		JLabel lblNewLabel = new JLabel("",Sicon,SwingConstants.CENTER);
 		lblNewLabel.setBounds(0, 0, 450, 300);
 		frame.getContentPane().add(lblNewLabel);
-		
-		
 	}
 }
