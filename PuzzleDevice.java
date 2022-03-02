@@ -186,7 +186,7 @@ public class PuzzleDevice extends JFrame {
 
     private BufferedImage loadImage() throws IOException {
 
-        BufferedImage bimg = ImageIO.read(new File("C:\\java-game\\hack.jpg"));
+        BufferedImage bimg = ImageIO.read(new File("D:\\miniproject\\hack.jpg"));
 
         return bimg;
     }
